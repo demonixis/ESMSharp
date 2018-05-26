@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29596D54-F8E6-4A68-92E6-3DE7ADBE1155}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ESMSharp</RootNamespace>
+    <AssemblyName>ESMSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ESMSharp.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=47d7877cb3620160">
+      <HintPath>..\packages\zlib.net.1.0.4.0\lib\zlib.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\BetterBinaryReader.cs" />
+    <Compile Include="Core\BetterMemoryReader.cs" />
+    <Compile Include="Core\BetterReader.cs" />
+    <Compile Include="Core\BSAArchive.cs" />
+    <Compile Include="Core\BSAFileInfo.cs" />
+    <Compile Include="Core\BSAHeader.cs" />
+    <Compile Include="Core\FileSystem.cs" />
+    <Compile Include="Core\Utils.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TES3\Master.cs" />
+    <Compile Include="TES3\Record.cs" />
+    <Compile Include="TES3\Records\SubRecords.cs" />
+    <Compile Include="TES3\Records\TES3Record.cs" />
+    <Compile Include="TES3\TES3Master.cs" />
+    <Compile Include="TES4\Common.cs" />
+    <Compile Include="TES4\Group.cs" />
+    <Compile Include="TES4\Record.cs" />
+    <Compile Include="TES4\Records\ACHRRecord.cs" />
+    <Compile Include="TES4\Records\ACRERecord.cs" />
+    <Compile Include="TES4\Records\ACTIRecord.cs" />
+    <Compile Include="TES4\Records\ALCHRecord.cs" />
+    <Compile Include="TES4\Records\AMMORecord.cs" />
+    <Compile Include="TES4\Records\ANIORecord.cs" />
+    <Compile Include="TES4\Records\APPARecord.cs" />
+    <Compile Include="TES4\Records\ARMORecord.cs" />
+    <Compile Include="TES4\Records\BOOKRecord.cs" />
+    <Compile Include="TES4\Records\BSGNRecord.cs" />
+    <Compile Include="TES4\Records\CELLRecord.cs" />
+    <Compile Include="TES4\Records\CLASRecord.cs" />
+    <Compile Include="TES4\Records\CLMTRecord.cs" />
+    <Compile Include="TES4\Records\CLOTRecord.cs" />
+    <Compile Include="TES4\Records\CONTRecord.cs" />
+    <Compile Include="TES4\Records\CREARecord.cs" />
+    <Compile Include="TES4\Records\CSTYRecord.cs" />
+    <Compile Include="TES4\Records\DIALRecord.cs" />
+    <Compile Include="TES4\Records\DOORRecord.cs" />
+    <Compile Include="TES4\Records\EFSHRecord.cs" />
+    <Compile Include="TES4\Records\ENCHRecord.cs" />
+    <Compile Include="TES4\Records\EYESRecord.cs" />
+    <Compile Include="TES4\Records\FACTRecord.cs" />
+    <Compile Include="TES4\Records\FLORRecord.cs" />
+    <Compile Include="TES4\Records\FURNRecord.cs" />
+    <Compile Include="TES4\Records\GLOBRecord.cs" />
+    <Compile Include="TES4\Records\GMSTRecord.cs" />
+    <Compile Include="TES4\Records\GRASRecord.cs" />
+    <Compile Include="TES4\Records\HAIRRecord.cs" />
+    <Compile Include="TES4\Records\IDLERecord.cs" />
+    <Compile Include="TES4\Records\INFORecord.cs" />
+    <Compile Include="TES4\Records\INGRRecord.cs" />
+    <Compile Include="TES4\Records\KEYMRecord.cs" />
+    <Compile Include="TES4\Records\LANDRecord.cs" />
+    <Compile Include="TES4\Records\LIGHRecord.cs" />
+    <Compile Include="TES4\Records\LSCRRecord.cs" />
+    <Compile Include="TES4\Records\LTEXRecord.cs" />
+    <Compile Include="TES4\Records\LVLCRecord.cs" />
+    <Compile Include="TES4\Records\LVLIRecord.cs" />
+    <Compile Include="TES4\Records\LVSPRecord.cs" />
+    <Compile Include="TES4\Records\MGEFRecord.cs" />
+    <Compile Include="TES4\Records\MISCRecord.cs" />
+    <Compile Include="TES4\Records\NPC_Record.cs" />
+    <Compile Include="TES4\Records\PACKRecord.cs" />
+    <Compile Include="TES4\Records\PGRDRecord.cs" />
+    <Compile Include="TES4\Records\QUSTRecord.cs" />
+    <Compile Include="TES4\Records\RACERecord.cs" />
+    <Compile Include="TES4\Records\REFRRecord.cs" />
+    <Compile Include="TES4\Records\REGNRecord.cs" />
+    <Compile Include="TES4\Records\ROADRecord.cs" />
+    <Compile Include="TES4\Records\SBSPRecord.cs" />
+    <Compile Include="TES4\Records\SCPTRecord.cs" />
+    <Compile Include="TES4\Records\SGSTRecord.cs" />
+    <Compile Include="TES4\Records\SKILRecord.cs" />
+    <Compile Include="TES4\Records\SLGMRecord.cs" />
+    <Compile Include="TES4\Records\SOUNRecord.cs" />
+    <Compile Include="TES4\Records\SPELRecord.cs" />
+    <Compile Include="TES4\Records\STATRecord.cs" />
+    <Compile Include="TES4\Records\TES4Record.cs" />
+    <Compile Include="TES4\Records\TREERecord.cs" />
+    <Compile Include="TES4\Records\WATRRecord.cs" />
+    <Compile Include="TES4\Records\WEAPRecord.cs" />
+    <Compile Include="TES4\Records\WRLDRecord.cs" />
+    <Compile Include="TES4\Records\WTHRRecord.cs" />
+    <Compile Include="TES4\SubRecord.cs" />
+    <Compile Include="TES4\SubRecords\Common.cs" />
+    <Compile Include="TES4\SubRecords\FormID.cs" />
+    <Compile Include="TES4\SubRecords\MODL.cs" />
+    <Compile Include="TES4\SubRecords\ZString.cs" />
+    <Compile Include="TES4\TES4Master.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
